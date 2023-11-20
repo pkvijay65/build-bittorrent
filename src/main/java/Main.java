@@ -41,7 +41,7 @@ public class Main {
       while (bencodedString.charAt(numberEndIndex) != 'e') {
         numberEndIndex++;
       }
-      return bencodedString.substring(1, numberEndIndex);
+      return Integer.parseInt(bencodedString.substring(1, numberEndIndex));
     } else {
       throw new RuntimeException("Only strings and numbers are supported at the moment");
     }
